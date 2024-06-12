@@ -6,6 +6,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './style.sass'
+import ApartmentPage from '../Pages/ApartmentPage';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import ErrorPageNotFound from '../Pages/ErrorPageNotFound';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -13,15 +17,26 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <h1>404 not found</h1>
+    errorElement: <ErrorPageNotFound />,
   },
   {
     path: "/apartment",
-    element: <h1>Nos appartements</h1>,
+    element: ( 
+      <>
+      <Navbar />
+      <ApartmentPage />
+      <Footer />
+      </>
+      ),
   },
   {
     path: "/about",
-    element: <h1>A propos</h1>,
+    element: ( 
+    <>
+    <Navbar />
+    <Footer />
+    </>
+    ),
   },
 ]);
 root.render(<RouterProvider router={router} />);
