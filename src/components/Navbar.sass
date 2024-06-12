@@ -5,6 +5,12 @@
     padding: 0 2rem
     color: black
     font-weight: 500
-
-.navbar__logo
-    margin-right: auto
+    > *:first-child
+        margin-right: auto
+    a
+        text-decoration: none
+        color: black
+        &:hover
+            text-decoration: underline
+        &.active
+            text-decoration: underline
