@@ -1,12 +1,12 @@
 import React from 'react'
 import "./ApartmentPage.sass"
 import ApartmentDescription from '../src/components/ApartmentDescription'
-import ApartmentBanner from '../src/components/ApartmentBanner'
+import ImageBanner from '../src/components/ImageBanner'
 
 function ApartmentPage() {
   return (
     <div className="apartment-page">
-        <ApartmentBanner />
+        <ImageBanner />
         <div className="apartment__header">
             <div className="apartment__title">
                 <h1>Crazy loft on Canal Saint Martin</h1>
