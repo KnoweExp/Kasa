@@ -10,6 +10,7 @@ import ApartmentPage from '../Pages/ApartmentPage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ErrorPageNotFound from '../Pages/ErrorPageNotFound';
+import About from '../Pages/About';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -34,7 +35,16 @@ const router = createBrowserRouter([
     element: ( 
     <>
     <Navbar />
+    <About />
     <Footer />
+    </>
+    ),
+  },
+  {
+    path: "/404",
+    element: ( 
+    <>
+    <ErrorPageNotFound />
     </>
     ),
   },

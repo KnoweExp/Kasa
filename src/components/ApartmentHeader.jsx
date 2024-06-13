@@ -1,13 +1,9 @@
 import React from 'react'
-import "./ApartmentPage.sass"
-import ApartmentDescription from '../src/components/ApartmentDescription'
-import ApartmentBanner from '../src/components/ApartmentBanner'
+import "./ApartmentHeader.sass"
 
-function ApartmentPage() {
+function ApartmentHeader() {
   return (
-    <div className="apartment-page">
-        <ApartmentBanner />
-        <div className="apartment__header">
+    <div className="apartment__header">
             <div className="apartment__title">
                 <h1>Crazy loft on Canal Saint Martin</h1>
                 <h2>Paris, Ile de France</h2>
@@ -34,12 +30,7 @@ function ApartmentPage() {
                 </div>
             </div>
         </div>
-        <div className="apartment__description__area">
-            <ApartmentDescription />
-            <ApartmentDescription />
-        </div>    
-    </div>
   )
 }
 
-export default ApartmentPage
+export default ApartmentHeader
