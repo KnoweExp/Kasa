@@ -1,15 +1,17 @@
-import React from 'react'
+import React from "react";
 import "./Apartment.sass";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-function Apartment() {
+function Apartment(props) {
+  console.log("props dans apartment:", props);
   return (
-    <div className="apartment">
-        <Link to="/apartment">
-          <div className="apartment_title">Titre de la location</div>
-        </Link>
-        </div>
-  )
+    <Link to="/apartment">
+      <div className="apartment">
+        <img src={props.imageUrl} alt="" />
+        <div className="apartment_title">{props.title}</div>
+      </div>
+    </Link>
+  );
 }
 
-export default Apartment
+export default Apartment;
