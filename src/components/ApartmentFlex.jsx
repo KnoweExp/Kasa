@@ -11,7 +11,6 @@ function ApartmentFlex() {
     fetch("logements.json")
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
         setApartments(res);
       })
       .catch(console.error);
@@ -19,7 +18,12 @@ function ApartmentFlex() {
   return (
     <div className="flex">
       {apartments.map((apartment) => (
-        <Apartment title={apartment.title} imageUrl={apartment.cover} />
+        <Apartment
+          title={apartment.title}
+          imageUrl={apartment.cover}
+          id={apartment.id}
+          key={apartment.id}
+        />
       ))}
     </div>
   );

@@ -1,36 +1,44 @@
-import React from 'react'
-import "./ApartmentHeader.sass"
+import React from "react";
+import "./ApartmentHeader.sass";
 
-function ApartmentHeader() {
+function ApartmentHeader(props) {
+  console.log("Props apartment:", props);
+
+  const { apartment } = props;
+  const { name } = apartment.host;
+  const [firstName, lastName] = name.split(" ");
+
   return (
     <div className="apartment__header">
-            <div className="apartment__title">
-                <h1>Crazy loft on Canal Saint Martin</h1>
-                <h2>Paris, Ile de France</h2>
-                <div className="apartment__tags">
-                    <span>Cozy</span>
-                    <span>Canak</span>
-                    <span>Paris 10</span>
-                </div>
-            </div>
-            <div className="apartment__owner">
-                <div className="apartment__owner__details">
-                    <h3>
-                        <span>Alexandre</span> 
-                        <span>Dumas</span>
-                    </h3>
-                    <div className="apartment__owner__badge"></div>
-                </div>
-                <div className="apartment__owner__stars">
-                    <span className="on">★</span>
-                    <span className="on">★</span>
-                    <span className="on">★</span>
-                    <span className="off">★</span>
-                    <span className="off">★</span>
-                </div>
-            </div>
+      <div className="apartment__title">
+        <h1>{props.apartment.title}</h1>
+        <h2>{props.apartment.location}</h2>
+        <div className="apartment__tags">
+          {props.apartment.tags.map((tag) => (
+            <span key={tag}>{tag}</span>
+          ))}
         </div>
-  )
+      </div>
+      <div className="apartment__owner">
+        <div className="apartment__owner__details">
+          <h3>
+            <span>{firstName}</span>
+            <span>{lastName}</span>
+          </h3>
+          <div className="apartment__owner__badge">
+            <img src={apartment.host.picture} alt="" />
+          </div>
+        </div>
+        <div className="apartment__owner__stars">
+          {[1, 2, 3, 4, 5].map((num) => (
+            <span key={num} className={apartment.rating >= num ? "on" : ""}>
+              ★
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default ApartmentHeader
+export default ApartmentHeader;

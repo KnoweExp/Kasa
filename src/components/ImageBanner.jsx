@@ -1,12 +1,12 @@
-import React from 'react'
-import "./ImageBanner.sass"
+import React from "react";
+import "./ImageBanner.sass";
 
-function ImageBanner() {
+function ImageBanner(props) {
   return (
     <div className="ImageBanner">
-        <img src="Carrousel_image_1.png" alt="1er image carrousel" />
+      <img src={props.imageUrl} alt="1er image carrousel" />
     </div>
-  )
+  );
 }
 
-export default ImageBanner
+export default ImageBanner;
