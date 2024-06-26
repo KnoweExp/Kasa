@@ -65,7 +65,13 @@ function ApartmentPage() {
         />
         <ApartmentDescription
           title="Equipements"
-          content={Apartment.equipments}
+          content={
+            <ul>
+              {Apartment.equipments.map((eq, index) => (
+                <li key={index}>{eq}</li>
+              ))}
+            </ul>
+          }
         />
       </div>
     </div>
