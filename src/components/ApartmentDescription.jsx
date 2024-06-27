@@ -9,7 +9,7 @@ function ApartmentDescription(props) {
   };
 
   const contentClass =
-    (isContentVisible ? "" : "hidden") + "description__content";
+    (isContentVisible ? "visible " : "hidden ") + "description__content";
 
   return (
     <div className="apartment__description">
@@ -17,7 +17,6 @@ function ApartmentDescription(props) {
         <span>{props.title}</span>
         <i className="fas fa-chevron-up" onClick={showContent}></i>
       </p>
-      {isContentVisible ? "visible" : "hidden"}
       <div className={contentClass}>{props.content}</div>
     </div>
   );
