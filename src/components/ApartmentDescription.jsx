@@ -8,16 +8,17 @@ function ApartmentDescription(props) {
     setIsContentVisible(!isContentVisible);
   };
 
+  const contentClass =
+    (isContentVisible ? "" : "hidden") + "description__content";
+
   return (
     <div className="apartment__description">
       <p className="description__header">
         <span>{props.title}</span>
         <i className="fas fa-chevron-up" onClick={showContent}></i>
       </p>
-
-      {isContentVisible && (
-        <div className="description__content">{props.content}</div>
-      )}
+      {isContentVisible ? "visible" : "hidden"}
+      <div className={contentClass}>{props.content}</div>
     </div>
   );
 }
