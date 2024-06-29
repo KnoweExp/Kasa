@@ -8,6 +8,7 @@ function ApartmentDescription(props) {
     setIsContentVisible(!isContentVisible);
   };
 
+  // This function is used to check if the content is visible
   const contentClass =
     (isContentVisible ? "visible " : "hidden ") + "description__content";
 
