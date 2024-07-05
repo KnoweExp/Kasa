@@ -5,6 +5,8 @@ import "./ImageBanner.sass";
 function ImageBanner(props) {
   const pictures = props.pictures;
   const [currentPicture, setCurrentPicture] = useState(0);
+
+  // Fonction pour obtenir la classe CSS en fonction de l'image active
   const getClassName = (i) => {
     if (i === currentPicture) return "show";
     return "";
@@ -23,17 +25,19 @@ function ImageBanner(props) {
     setCurrentPicture(currentPicture - 1);
   };
 
-  // This function is used to check if there are pictures available
+  // Fonction pour vérifier si des images sont disponibles
   const arePicturesAvailable = () => {
     return pictures && pictures.length > 0;
   };
 
-  // This function is used to get the carousel or the default image
+  // Fonction pour obtenir le carrousel ou une image par défaut
   const getCarouselOrDefaultImage = () => {
     if (!arePicturesAvailable()) {
+      // Si pas d'images, afficher une image par défaut
       return;
       <img src="https://via.placeholder.com/800x400" className="show" alt="" />;
     }
+    // Sinon, mapper chaque image à un élément <img> avec la classe appropriée
     return pictures.map((picture, i) => (
       <img src={picture} alt="" key={picture} className={getClassName(i)} />
     ));
@@ -42,12 +46,15 @@ function ImageBanner(props) {
   return (
     <div className="ImageBanner">
       <div className="image__container">{getCarouselOrDefaultImage()}</div>
-      {arePicturesAvailable() && (
+      {arePicturesAvailable() && pictures.length > 1 && (
         <>
-          <button className="btn btn-next" onClick={moveToNext}>
+          <button className="btn btn-previous" onClick={moveToPrevious}>
             <i className="fas fa-chevron-left"></i>
           </button>
-          <button className="btn btn-previous" onClick={moveToPrevious}>
+          <span className="slide-counter">
+            {currentPicture + 1} / {pictures.length}
+          </span>
+          <button className="btn btn-next" onClick={moveToNext}>
             <i className="fas fa-chevron-right"></i>
           </button>
         </>

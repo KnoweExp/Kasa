@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import "./ApartmentDescription.sass";
 
 function ApartmentDescription(props) {
+  // Déclaration d'un état local pour contrôler la visibilité du contenu
   const [isContentVisible, setIsContentVisible] = useState(true);
 
+  // Fonction pour basculer la visibilité du contenu
   const showContent = () => {
     setIsContentVisible(!isContentVisible);
   };
 
-  // This function is used to check if the content is visible
+  // Construction de la classe CSS en fonction de l'état de visibilité du contenu
   const contentClass =
     (isContentVisible ? "visible " : "hidden ") + "description__content";
 

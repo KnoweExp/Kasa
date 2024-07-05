@@ -1,8 +1,16 @@
 .ImageBanner
+    margin: 2rem 5rem 2rem
     margin-bottom: 2rem
     position: relative
-    width: 100%
     height: 20rem
+    .slide-counter
+        position: absolute
+        right: 0
+        width: 100%
+        color: white
+        border-radius: 0 0 0 1rem
+        text-align: center
+        bottom: 1rem
     .btn
         top: 0
         bottom: 0
@@ -16,9 +24,9 @@
         &:focus
             outline: none
         &.btn-next
-            left: 0
-        &.btn-previous
             right: 0
+        &.btn-previous
+            left: 0
     img
         width: 100%
         height: 100%
