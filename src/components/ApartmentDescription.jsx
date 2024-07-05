@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./ApartmentDescription.sass";
 
 function ApartmentDescription(props) {
-  const [isContentVisible, setIsContentVisible] = useState(false);
+  const [isContentVisible, setIsContentVisible] = useState(true);
 
   const showContent = () => {
     setIsContentVisible(!isContentVisible);

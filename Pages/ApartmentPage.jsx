@@ -3,25 +3,10 @@ import "./ApartmentPage.sass";
 import ApartmentDescription from "../src/components/ApartmentDescription";
 import ImageBanner from "../src/components/ImageBanner";
 import ApartmentHeader from "../src/components/ApartmentHeader";
-import { useLocation } from "react-router-dom";
+import { useApartment } from "../public/hooks/useApartment";
 
 function ApartmentPage() {
-  const location = useLocation();
-  const [Apartment, setApartment] = useState(null);
-
-  useEffect(fetchApartmentData, []);
-
-  function fetchApartmentData() {
-    fetch("logements.json")
-      .then((res) => res.json())
-      .then((apartments) => {
-        const Apartment = apartments.find(
-          (apartment) => apartment.id === location.state.apartmentId
-        );
-        setApartment(Apartment);
-      })
-      .catch(console.error);
-  }
+  const Apartment = useApartment();
 
   if (Apartment == null) {
     return <div>Loading...</div>;
