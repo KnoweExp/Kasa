@@ -1,30 +1,37 @@
 .apartment__header
     display: flex
-    margin: 1rem 5rem 1rem
+    @media screen and (max-width: 768px)
+        display: block
+        margin: 1rem 5rem 1rem
     .apartment__title
         flex-grow: 1
-        .apartment__owner__details
-            display: flex
-            gap: 0.5rem
-        .apartment__owner__stars
+    .apartment__owner
+        display: flex
+        justify-content: space-between
+    .apartment__owner__details
+        display: flex
+        gap: 0.5rem
+        order: 1
+    .apartment__owner__stars
 
-            display: flex
-            gap: 0.2 rem
-            align-items: center
-            color: grey
-            *
-                font-size: 2rem
+        display: flex
+        gap: 0.2 rem
+        align-items: center
+        *
+            font-size: 2rem
             .on
                 color: #FF6060
-        .apartment__owner__badge
-            height: 50px
-            width: 50px
-            border-radius: 50%
-            background-color: grey
-        h3
-            font-weight: 400
-            display: flex
-            flex-direction: column
-            align-items: end
-            margin-top: 0
-            margin-bottom: 0
+            .off
+                color: grey
+    .apartment__owner__badge img
+        height: 50px
+        width: 50px
+        border-radius: 50%
+        background-color: grey
+    h3
+        font-weight: 400
+        display: flex
+        flex-direction: column
+        align-items: end
+        margin-top: 0
+        margin-bottom: 0

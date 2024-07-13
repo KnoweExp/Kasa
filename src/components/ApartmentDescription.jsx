@@ -3,7 +3,7 @@ import "./ApartmentDescription.sass";
 
 function ApartmentDescription(props) {
   // Déclaration d'un état local pour contrôler la visibilité du contenu
-  const [isContentVisible, setIsContentVisible] = useState(true);
+  const [isContentVisible, setIsContentVisible] = useState(false);
 
   // Fonction pour basculer la visibilité du contenu
   const showContent = () => {
