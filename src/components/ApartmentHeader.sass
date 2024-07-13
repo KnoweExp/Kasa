@@ -6,8 +6,10 @@
     .apartment__title
         flex-grow: 1
     .apartment__owner
-        display: flex
+        display: block
         justify-content: space-between
+        @media screen and (max-width: 768px)
+            display: flex
     .apartment__owner__details
         display: flex
         gap: 0.5rem
