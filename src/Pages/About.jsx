@@ -1,6 +1,6 @@
 import React from "react";
-import ApartmentDescription from "../src/components/ApartmentDescription";
-import ImageBanner from "../src/components/ImageBanner";
+import ApartmentDescription from "/src/components/ApartmentDescription";
+import ImageBanner from "/src/components/ImageBanner";
 import "./About.sass";
 
 function About() {
