@@ -1,12 +1,8 @@
-import React from 'react'
+import React from "react";
 import "./Banner.sass";
 
 function Banner() {
-  return (
-    <div className="banner">
-        <img src="Banner.png" alt="banner" />
-    </div>
-  )
+  return <div className="banner"></div>;
 }
 
-export default Banner
+export default Banner;

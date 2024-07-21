@@ -7,7 +7,7 @@ function Navbar() {
     <nav className="navbar">
       <NavLink to="/">
         <div className="navbar__logo">
-          <img src="LOGO_kasa_svg.svg" alt="logo" />
+          <img src="../src/assets/LOGO_kasa_svg.svg" alt="logo" />
         </div>
       </NavLink>
       <NavLink to="/">Accueil</NavLink>

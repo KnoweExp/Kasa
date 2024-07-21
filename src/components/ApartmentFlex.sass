@@ -2,14 +2,19 @@
     background-color: #F2F2F2
     min-height: 50vh
     border-radius: 2rem
-    display: flex
-    flex-wrap: wrap
-    gap: 1rem
-    padding: 1rem
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    row-gap: 1rem
+    padding-block: 2rem
+    margin-block: 2rem
     justify-content: space-between
+    a
+        display: flex
+        justify-content: center
 
 @media screen and (width <= 768px)
     .flex
+        display: flex
+        flex-direction: column
         justify-content: center
         background-color: inherit
-        padding: 0

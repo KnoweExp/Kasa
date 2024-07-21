@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPageNotFound />,
   },
   {
-    path: "/apartment",
+    path: "/apartment/:apartmentId",
     element: (
       <>
         <Navbar />
