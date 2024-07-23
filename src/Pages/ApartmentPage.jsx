@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
 import "./ApartmentPage.sass";
 import ApartmentDescription from "/src/components/ApartmentDescription";
 import ImageBanner from "/src/components/ImageBanner";
 import ApartmentHeader from "/src/components/ApartmentHeader";
-import { useApartment } from "/public/hooks/useApartment";
+import { useApartment } from "../hooks/useApartment";
 
 function ApartmentPage() {
   const Apartment = useApartment();

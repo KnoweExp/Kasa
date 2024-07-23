@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export function useApartment() {
   const [apartment, setApartment] = useState(null);
-  const { apartmentId } = useParams(); // Utilisation du hook useLocation pour accéder aux informations de la route actuelle
+  const { apartmentId } = useParams();
 
   useEffect(() => {
     fetch("../logements.json")

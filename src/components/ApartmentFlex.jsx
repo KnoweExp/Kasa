@@ -1,13 +1,13 @@
 import "./ApartmentFlex.sass";
 import Apartment from "./Apartment.jsx";
-import { useApartments } from "../../public/hooks/useApartments";
+import { useApartments } from "../hooks/useApartments.jsx";
 
 function ApartmentFlex() {
   // fetch des appartements
   const apartments = useApartments();
 
   return (
-    <div className="flex">
+    <div className="container">
       {apartments.map((apartment) => (
         <Apartment
           title={apartment.title}
