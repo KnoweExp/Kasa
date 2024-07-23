@@ -2,7 +2,6 @@ import React from "react";
 import "./ApartmentHeader.sass";
 
 function ApartmentHeader(props) {
-  console.log("Props apartment:", props);
 
   const { apartment } = props;
   const { name } = apartment.host;

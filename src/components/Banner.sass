@@ -14,21 +14,19 @@
 
 @media (max-width: 767px)
     .banner
-        background-image: url('./src/assets/banner_mobile_t.svg')
+        background-image: url('../src/assets/banner_mobile_t.svg')
         background-size: cover
         background-position: center
         height: 100px
         width: 100%
         border-radius: 5px
+        img
+            height: 0
+            width: 0
         h1
             font-size: 24px
 @media (min-width: 768px)
     .banner
-        background-image: url('./src/assets/banner_desktop_t.png')
-        background-size: cover
-        background-position: center
-        width: 1240px
-        height: 220px
-        border-radius: 15px
-        h1
-            padding-top: 95px
+        display: flex
+        justify-content: center
+

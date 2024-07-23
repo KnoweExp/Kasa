@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import "./ApartmentFlex.sass";
 import Apartment from "./Apartment.jsx";
 import { useApartments } from "../../public/hooks/useApartments";
