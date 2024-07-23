@@ -16,7 +16,7 @@ export function useApartment() {
         const searchApartment = apartments.find(
           (apartment) => apartment.id === apartmentId
         );
-        setApartment(searchApartment);
+        setApartment(searchApartment || undefined);
       })
       .catch(console.error);
   }, [apartmentId]);
